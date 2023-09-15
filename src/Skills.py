@@ -4,5 +4,18 @@ class Skill:
         self.name = name,
         self.description = description
  
+
+class WriteFile(Skill):
+    
+    def apply(self, path, content):
         
-    def apply(self): pass
+        with open(path, 'w') as f:
+            f.write(content)
+            
+class ReadFile(Skill):
+    
+    def apply(self, path):
+        
+        with open(path, 'r') as f:
+            content = f.read()
+        return content
