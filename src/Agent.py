@@ -10,7 +10,7 @@ class Agent:
         self.skills = []
     
     def add_skill(self, skill:Skill):
-        pass
+        self.skills.append(skill)
     
     def do(self, general_goal: str, max_iter=None):
         
@@ -18,11 +18,11 @@ class Agent:
         n_action = 0
         while n_action <= max_iter:
                         
-            skill = self.planner.get_next_task(general_goal)
+            skill = self.planner.get_next_task(general_goal, self.skills)
             
             if skill.name == "finish":
                 break
             
-            feedback = skill.execute()
+            feedback = skill.apply()
             n_action += 1
             

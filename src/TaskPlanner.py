@@ -6,8 +6,9 @@ class TaskPlanner:
     def get_next_task(
             self,
             general_goal: str,
+            skills: List[Skill]
             
     ) -> Skill:
-        #open ai caché 
+        
         return skills[0]
     
