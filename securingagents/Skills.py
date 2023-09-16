@@ -1,9 +1,17 @@
+from abc import abstractmethod
+
 class Skill:
     
     def __init__(self, name: str, description: str):
         self.name = name,
         self.description = description
+    
+    @abstractmethod
+    def apply(self): pass
  
+
+class ReadLogFile(Skill): pass
+
 
 class WriteFile(Skill):
     

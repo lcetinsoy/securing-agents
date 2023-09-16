@@ -1,6 +1,6 @@
 from typing import List
-from Skills import Skill
-from LLMCompleter import LLMCompleter
+from securingagents.Skills import Skill
+from securingagents.LLMCompleter import LLMCompleter
 
 class TaskPlanner:
     

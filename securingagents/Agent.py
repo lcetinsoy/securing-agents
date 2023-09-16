@@ -1,5 +1,5 @@
-from Skills import Skill 
-from TaskPlanner import TaskPlanner
+from securingagents.Skills import Skill 
+from securingagents.TaskPlanner import TaskPlanner
 
 class Agent:
 

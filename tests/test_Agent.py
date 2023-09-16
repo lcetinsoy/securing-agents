@@ -1,7 +1,8 @@
-from Agent import Agent
-from TaskPlanner import TaskPlanner
-from Skills import Skill
+from securingagents.Agent import Agent
+from securingagents.TaskPlanner import TaskPlanner
+from securingagents.Skills import Skill
 from typing import List
+from securingagents.LLMCompleter import LLMCompleter
 
 class PlannerFake(TaskPlanner):
     
@@ -12,7 +13,7 @@ class PlannerFake(TaskPlanner):
 
 def test_plan_action():
     
-    planner = PlannerFake()
+    planner = PlannerFake(LLMCompleter())
     agent = Agent(planner)
     agent.add_skill(Skill("derp", "do nothing"))
     
