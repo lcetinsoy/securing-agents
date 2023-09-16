@@ -12,12 +12,32 @@ so that you are sure the agents does not interfer.
 Why not an agent for a CI/CD pipeline ? 
 Because it is the prod env which matters
 
+## Quick start
+
+### installation
+
+```bash
+make install 
+
+#or 
+
+pip install -r requirements.txt
+
+```
+### usage 
+
+```bash
+python main.py 
+```
+
+Notice error line, fork, fix and make a PR :D 
+
+
 ## todo 
 
 - get feedback from a run skill
 - plug feedback in the planner
 - handle skill error
-
 
 ### notes
 - port to go / rust to have static binary agent for deployment easing
