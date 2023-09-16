@@ -5,7 +5,7 @@ class Agent:
 
     def __init__(self, planner:TaskPlanner):# injection de dépendance
         #avantage 1 : c'est l'utilisateur de la classe qui décide de l'implémentation de TaskPlanner
-        #avantat2 : pour les tests unitaires on peut créer notre fausse implémentation
+        #avantage 2 : pour les tests unitaires on peut créer notre fausse implémentation
         self.planner = planner
         self.skills = []
     
@@ -18,7 +18,7 @@ class Agent:
         n_action = 0
         while n_action <= max_iter:
                         
-            skill = self.planner.get_next_task(general_goal, self.skills)
+            skill = self.planner.get_next_task(general_goal, self.skills, feedback)
             
             if skill.name == "finish":
                 break
