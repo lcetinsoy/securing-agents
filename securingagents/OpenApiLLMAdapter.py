@@ -1,13 +1,13 @@
 import openai
-
+import os
 from dotenv import load_dotenv,get_key
-from LLMCompleter import LLMCompleter
+from securingagents.LLMCompleter import LLMCompleter
 
 class OpenApiLLMAdapter(LLMCompleter):
     
     def __init__(self):
         load_dotenv()
-        self.key = get_key('OPEN_API_KEY')
+        self.key = os.getenv('OPEN_API_KEY')
         openai.api_key = self.key
         self.model ="davinci-002"
         

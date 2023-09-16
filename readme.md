@@ -14,10 +14,13 @@ Because it is the prod env which matters
 
 ## todo 
 
-- port to go / rust to have agent binary more easily deployable
 - get feedback from a run skill
 - plug feedback in the planner
 - handle skill error
+
+
+### notes
+- port to go / rust to have static binary agent for deployment easing
 
 ## Licence
 

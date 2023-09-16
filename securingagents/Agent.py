@@ -1,7 +1,13 @@
 from securingagents.Skills import Skill 
 from securingagents.TaskPlanner import TaskPlanner
-
+from typing_extensions  import Self
 class Agent:
+    
+    @classmethod
+    def build_default(cls) -> Self:
+        from securingagents.OpenApiLLMAdapter import OpenApiLLMAdapter
+        agent = cls(TaskPlanner(OpenApiLLMAdapter()))
+        return agent
 
     def __init__(self, planner:TaskPlanner):# injection de dépendance
         #avantage 1 : c'est l'utilisateur de la classe qui décide de l'implémentation de TaskPlanner
