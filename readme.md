@@ -23,7 +23,12 @@ make install
 
 pip install -r requirements.txt
 
+
+cp .env.template .env
+
+#add you api key (openai for now)
 ```
+
 ### usage 
 
 ```bash
