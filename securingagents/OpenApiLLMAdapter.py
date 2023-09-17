@@ -1,7 +1,10 @@
 import openai
 import os
-from dotenv import load_dotenv,get_key
+from dotenv import load_dotenv
+
+
 from securingagents.LLMCompleter import LLMCompleter
+from securingagents.PromptLogging import log_completion
 
 class OpenApiLLMAdapter(LLMCompleter):
     
@@ -11,12 +14,12 @@ class OpenApiLLMAdapter(LLMCompleter):
         openai.api_key = self.key
         self.model ="davinci-002"
         
+    @log_completion
     def complete(self, prompt: str, max_token: int, temperature: float) -> str:
         
         completion = openai.Completion.create(
             model=self.model,
             temperature=temperature,
-            max_token=max_token,
             prompt=prompt
         )
         
