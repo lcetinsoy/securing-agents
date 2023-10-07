@@ -34,11 +34,13 @@ cp .env.template .env
 ```bash
 python main.py 
 ```
-
 Notice error line, fork, fix and make a PR :D 
 
-
 ## todo 
+
+- a skill neeed a call to LLM to choose the parameters. 
+
+- Si trop d'erreur de prompt, faire un improve planner automatique (idem si nombre pas généré par exemple) 
 
 - get feedback from a run skill
 - plug feedback in the planner
