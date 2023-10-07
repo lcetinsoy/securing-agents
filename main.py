@@ -1,6 +1,8 @@
 from securingagents.Agent import Agent
 from securingagents.Skills import *
-task = "create a python file saying hello"
+
+
+task = "create a python file saying hello and save it in hello.py"
 #task = input('Give me a task:')
 
 agent = Agent.build_default()
